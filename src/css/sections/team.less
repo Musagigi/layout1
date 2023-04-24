@@ -1,0 +1,38 @@
+.team {
+	width: 100%;
+	// margin-top: 95px;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// column-gap: 60px;
+		row-gap: 170px;
+	}
+
+	&__card {
+		width: 300px;
+	}
+}
+
+.staff {
+	position: relative;
+
+	&__image {
+		width: 240px;
+	}
+
+	&__name {
+		margin-top: 15px;
+		font-family: Poppins;
+		.fontStyle(18px, 600, 27px)
+	}
+
+	&__specialty {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: rotate(90deg);
+		// transform-origin: top right;
+	}
+}

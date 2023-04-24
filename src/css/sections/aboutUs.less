@@ -1,0 +1,34 @@
+.aboutUs {
+	display: flex;
+	flex-wrap: wrap;
+
+	&_offset-top {
+		margin-top: 110px
+	}
+
+	&__title {
+		flex-basis: 50%;
+		font-family: 'PT Serif';
+		.fontStyle(36px, 700, 48px, @colorBlack)
+	}
+
+	&__descr {
+		flex-basis: 50%;
+	}
+}
+
+.descr {
+	font-family: 'Poppins';
+
+	&__subtitle {
+		.fontStyle(18px, 600, 27px, @colorBlack)
+	}
+
+	&__text {
+		.fontStyle(18px, 400, 27px, @colorBlack)
+	}
+}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 576px) {}
