@@ -3,34 +3,34 @@
 	margin-top: 95px;
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		// column-gap: 60px;
+		display: grid;
+		grid-template-columns: repeat(3, 270px);
+		grid-template-rows: repeat(2, 1fr);
 		row-gap: 170px;
-	}
-
-	&__staff {
-		// width: 300px;
-
+		column-gap: 54px;
 	}
 }
 
 .staff {
-	// position: relative;
+	position: relative;
 
-	// &__image {
-	// 	width: 240px;
-	// }
+	&__image {
+		display: block;
+		width: 238px;
+		height: 340px;
+	}
 
-	// &__name {
-	// 	margin-top: 15px;
-	// 	font-family: Poppins;
-	// 	.fontStyle(18px, 600, 27px)
-	// }
+	&__name {
+		margin-top: 15px;
+		font-family: Poppins;
+		.fontStyle(18px, 600, 27px);
+	}
 
-	// &__specialty {
-	// 	float: right;
-	// transform: rotate(90deg);
-	// }
+	&__specialty {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		writing-mode: vertical-rl;
+	}
 }
