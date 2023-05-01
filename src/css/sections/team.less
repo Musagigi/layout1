@@ -1,22 +1,29 @@
 .team {
 	width: 100%;
-	margin-top: 95px;
+
+	&_offset-top {
+		margin-top: 95px;
+	}
 
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(3, 270px);
-		grid-template-rows: repeat(2, 1fr);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		row-gap: 170px;
-		column-gap: 54px;
+	}
+
+	&__staff:nth-child(3n+2) {
+		margin-top: 100px;
 	}
 }
 
 .staff {
 	position: relative;
+	width: 270px;
 
 	&__image {
 		display: block;
-		width: 238px;
+		max-width: 238px;
 		height: 340px;
 	}
 
@@ -32,5 +39,63 @@
 		top: 0;
 		right: 0;
 		writing-mode: vertical-rl;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.team {
+
+		&__list {
+			justify-content: space-evenly;
+			row-gap: 65px;
+		}
+
+		&__staff:nth-child(3n+2) {
+			margin-top: 0px;
+		}
+
+		&__staff:nth-child(2n+2) {
+			margin-top: 65px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.team {
+
+		&_offset-top {
+			margin-top: 55px;
+		}
+
+		&__list {
+			column-gap: 25px;
+		}
+	}
+
+	.staff {
+		width: 180px;
+
+		&__image {
+			display: block;
+			width: 148px;
+			height: 210px;
+		}
+
+		&__name {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.team {
+
+		&__list {
+			row-gap: 35px;
+		}
+
+		&__staff:nth-child(2n+2) {
+			margin-top: 0px;
+		}
 	}
 }
